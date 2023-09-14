@@ -6,33 +6,44 @@
 /*   By: iubieta- <iubieta-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/12 16:08:02 by iubieta-          #+#    #+#             */
-/*   Updated: 2023/09/12 16:50:01 by iubieta-         ###   ########.fr       */
+/*   Updated: 2023/09/14 19:46:25 by iubieta-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
+#include <unistd.h>
 #include <string.h>
 
 void    ft_bzero(void *s, size_t n)
 {
-    unsigned char *str;
-    unsigned int i;
+	unsigned char   *str;
+	size_t			i;
 
-    str = (unsigned char *)s;
-    i = 0;
-    while (i < n)
-    {
-        str[i] = 0;
-        i++;
-    }
+	str = s; //OJO: UNSIGNED CHAR *????
+	i = 0;
+	while (i < n)
+	{
+		str[i] = 0;
+		i++;
+	}
 }
 
 int main()
 {
-    char myString[5]; // Declaración de un arreglo de 5 enteros
+	char str[50] = "Esta es la funcion bzero";
 
 
-    bzero(myString, sizeof(myString));
-    // Imprimir los valores del arreglo
-    printf("myString = %s\n", myString);
+	printf("String original:  %s\n", str);
+	bzero(str, 2);
+	write(1, "Función original: ", 20);
+	write(1, &str, 30);
+	write(1, "\n", 1);
+
+	char str1[50] = "Esta es la funcion bzero";
+
+	ft_bzero(str1, 2);
+	write(1, "Función propia:   ", 20);
+	write(1, &str1, 30);
+	write(1, "\n", 1);
+	return(0);
 }

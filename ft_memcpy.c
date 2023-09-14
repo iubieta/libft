@@ -1,45 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: iubieta- <iubieta-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/12 15:31:39 by iubieta-          #+#    #+#             */
-/*   Updated: 2023/09/14 19:10:39 by iubieta-         ###   ########.fr       */
+/*   Created: 2023/09/14 19:30:46 by iubieta-          #+#    #+#             */
+/*   Updated: 2023/09/14 19:40:55 by iubieta-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <string.h>
 
-void *  ft_memset(void *b, int c, size_t len)
+void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
-	unsigned char	*str;
-	size_t    		i;
-	
-	str = (unsigned char *)b;
+	size_t	i;
+
 	i = 0;
-	while (i < len)
+	while (i < n)
 	{
-		str[i] = c;
+		((unsigned char *)dest)[i] = ((unsigned char *)src)[i];
 		i++;
 	}
-	return (b);
+	return (dest);
 }
 
-int main()
+int main(void)
 {
-	char str[50] = "Esta es una funcion muy bonica";
-
-	printf("String original: %s\n", str);
-	memset(str + 5,'$', 4);
-	printf("Función original: %s\n", str);
+   char src[50] = "mahmudulhasanjony";
+   char dest[50];
+   char dest1[50];
 
 
-	char str1[50] = "Esta es una funcion muy bonica";
-  
-	ft_memset(str1 + 5,'$', 4);
-	printf("Función propia: %s\n", str1);
-	return(0);
+   memcpy(dest, src, 25);
+   printf("Funcion original: %s\n", dest);
+   ft_memcpy(dest1, src, 25);
+   printf("Funcion propia:   %s\n", dest1);
+   return (0);
 }
