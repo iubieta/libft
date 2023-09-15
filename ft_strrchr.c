@@ -1,27 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: iubieta- <iubieta-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/15 17:53:50 by iubieta-          #+#    #+#             */
-/*   Updated: 2023/09/15 18:20:05 by iubieta-         ###   ########.fr       */
+/*   Created: 2023/09/15 18:21:32 by iubieta-          #+#    #+#             */
+/*   Updated: 2023/09/15 18:26:00 by iubieta-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 #include <stdio.h>
 
-char	*ft_strchr(const char *s, int c)
+char	*ft_strrchr(const char *s, int c)
 {
 	char	ch;
 	char	*ptr;
 
 	ch = (char)c;
 	ptr = s;
-	while (*ptr != ch && *ptr != '\0')
+	while (*ptr != '\0')
 		ptr++;
+	while (*ptr != ch && ptr != s)
+		ptr--;
 	if (*ptr == ch)
 		return (ptr);
 	else
@@ -33,6 +35,6 @@ int	main()
 	char	str[50] = "String en el que buscar";
 	char	c = '\0';
 
-	printf("%s\n",strchr(str,c));
-	printf("%s\n",ft_strchr(str,c));
+	printf("%s\n",strrchr(str,c));
+	printf("%s\n",ft_strrchr(str,c));
 }
