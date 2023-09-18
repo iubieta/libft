@@ -3,12 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: iubieta- <iubieta-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/17 17:36:09 by marvin            #+#    #+#             */
-/*   Updated: 2023/09/17 17:36:09 by marvin           ###   ########.fr       */
+/*   Created: 2023/09/18 18:47:56 by iubieta-          #+#    #+#             */
+/*   Updated: 2023/09/18 18:47:56 by iubieta-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 
 #include <string.h>
 #include <stdio.h>

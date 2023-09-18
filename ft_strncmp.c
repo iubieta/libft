@@ -3,12 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: iubieta- <iubieta-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/17 13:19:10 by marvin            #+#    #+#             */
-/*   Updated: 2023/09/17 13:19:10 by marvin           ###   ########.fr       */
+/*   Created: 2023/09/18 18:48:11 by iubieta-          #+#    #+#             */
+/*   Updated: 2023/09/18 18:48:11 by iubieta-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 
 #include <stdio.h>
 #include <string.h>
