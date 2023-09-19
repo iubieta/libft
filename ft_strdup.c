@@ -1,52 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: iubieta- <iubieta-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/19 18:48:40 by iubieta-          #+#    #+#             */
-/*   Updated: 2023/09/19 19:58:46 by iubieta-         ###   ########.fr       */
+/*   Created: 2023/09/19 20:15:38 by iubieta-          #+#    #+#             */
+/*   Updated: 2023/09/19 20:33:18 by iubieta-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <string.h>
 #include <stdio.h>
 #include <stdlib.h>
 
-int	ft_atoi(const char *s)
+char	*ft_strdup(const char *s)
 {
+	char	*s_copy;
 	size_t	i;
-	long	number;
-	int		sign;
 
+	s_copy = malloc(sizeof(s));
+	if (!s_copy)
+		return (0);
 	i = 0;
-	sign = 1;
-	number = 0;
-	while (s[i] == ' ' || s[i] == '\t' || s[i] == '\n' 
-		|| s[i] == '\r' || s[i] == '\v' || s[i] == '\f' )
-		i++;
-	if (s[i] == '-')
+	while (s[i] != '\0')
 	{
-		sign = -1;
+		s_copy[i] = s[i];
 		i++;
 	}
-	while (s[i] >= '0' && s[i] <= '9') 
-	{
-		number = number * 10 + s[i] - 48;
-		i++;
-	}
-	i++;
-	
-	return (number * sign);
+	s_copy[i] = '\0';
+	return (s_copy);
 }
 
 int main()
 {
-	char str[50] = "\t12300000000000000p2";
+	char s[50] = "Hola que tal";
 
-	int og_atoi = atoi(str);
-	int my_atoi = ft_atoi(str);
-
-	printf("%i\n",og_atoi);
-	printf("%i\n",my_atoi);
+	printf("%s\n",strdup(s));
+	printf("%s\n",ft_strdup(s));
 }
