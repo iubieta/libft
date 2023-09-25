@@ -6,12 +6,14 @@
 /*   By: iubieta- <iubieta-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/19 18:48:40 by iubieta-          #+#    #+#             */
-/*   Updated: 2023/09/19 19:58:46 by iubieta-         ###   ########.fr       */
+/*   Updated: 2023/09/22 16:52:20 by iubieta-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
+/* #include <stdio.h>
+#include <stdlib.h> */
+
+#include "libft.h"
 
 int	ft_atoi(const char *s)
 {
@@ -22,7 +24,7 @@ int	ft_atoi(const char *s)
 	i = 0;
 	sign = 1;
 	number = 0;
-	while (s[i] == ' ' || s[i] == '\t' || s[i] == '\n' 
+	while (s[i] == ' ' || s[i] == '\t' || s[i] == '\n'
 		|| s[i] == '\r' || s[i] == '\v' || s[i] == '\f' )
 		i++;
 	if (s[i] == '-')
@@ -30,17 +32,18 @@ int	ft_atoi(const char *s)
 		sign = -1;
 		i++;
 	}
-	while (s[i] >= '0' && s[i] <= '9') 
+	else if (s[i] == '+')
+		i++;
+	while (s[i] >= '0' && s[i] <= '9')
 	{
 		number = number * 10 + s[i] - 48;
 		i++;
 	}
 	i++;
-	
 	return (number * sign);
 }
 
-int main()
+/* int main()
 {
 	char str[50] = "\t12300000000000000p2";
 
@@ -49,4 +52,4 @@ int main()
 
 	printf("%i\n",og_atoi);
 	printf("%i\n",my_atoi);
-}
+} */

@@ -6,12 +6,14 @@
 /*   By: iubieta- <iubieta-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/15 17:24:39 by iubieta-          #+#    #+#             */
-/*   Updated: 2023/09/15 17:45:36 by iubieta-         ###   ########.fr       */
+/*   Updated: 2023/09/22 16:40:05 by iubieta-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <ctype.h>
-#include <stdio.h>
+/* #include <ctype.h>
+#include <stdio.h> */
+
+#include "libft.h"
 
 int	ft_toupper(int c)
 {
@@ -20,11 +22,11 @@ int	ft_toupper(int c)
 	return (c);
 }
 
-int	main()
+/* int	main()
 {
 	unsigned char	c;
 	
 	c = 'a';
 	printf("%c\n",toupper(c));
 	printf("%c\n",ft_toupper(c));
-}
+} */

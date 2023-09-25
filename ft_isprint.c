@@ -6,7 +6,7 @@
 /*   By: iubieta- <iubieta-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/12 12:47:28 by iubieta-          #+#    #+#             */
-/*   Updated: 2023/09/12 12:48:08 by iubieta-         ###   ########.fr       */
+/*   Updated: 2023/09/22 17:01:26 by iubieta-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,17 @@
 #include <stdio.h>
 #include <ctype.h>
 */
-int	ft_isascii(int c)
+
+#include "libft.h"
+
+int	ft_print(int c)
 {
 	if (c >= 32 && c <= 126)
 		return (1);
 	else
 		return (0);
 }
+
 /*int	main(void)
 {
 	unsigned char c;

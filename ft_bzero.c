@@ -6,20 +6,22 @@
 /*   By: iubieta- <iubieta-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/12 16:08:02 by iubieta-          #+#    #+#             */
-/*   Updated: 2023/09/14 19:46:25 by iubieta-         ###   ########.fr       */
+/*   Updated: 2023/09/22 16:53:54 by iubieta-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+/* #include <stdio.h>
 #include <unistd.h>
-#include <string.h>
+#include <string.h> */
 
-void    ft_bzero(void *s, size_t n)
+#include "libft.h"
+
+void	ft_bzero(void *s, size_t n)
 {
-	unsigned char   *str;
+	unsigned char	*str;
 	size_t			i;
 
-	str = s; //OJO: UNSIGNED CHAR *????
+	str = s;
 	i = 0;
 	while (i < n)
 	{
@@ -28,7 +30,7 @@ void    ft_bzero(void *s, size_t n)
 	}
 }
 
-int main()
+/* int main()
 {
 	char str[50] = "Esta es la funcion bzero";
 
@@ -46,4 +48,4 @@ int main()
 	write(1, &str1, 30);
 	write(1, "\n", 1);
 	return(0);
-}
+} */

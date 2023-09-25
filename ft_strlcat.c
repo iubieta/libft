@@ -6,21 +6,38 @@
 /*   By: iubieta- <iubieta-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/15 16:45:40 by iubieta-          #+#    #+#             */
-/*   Updated: 2023/09/15 17:24:12 by iubieta-         ###   ########.fr       */
+/*   Updated: 2023/09/22 18:25:54 by iubieta-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include <stdio.h>
+/* #include <string.h>
+#include <stdio.h> */
+
+#include "libft.h"
 
 size_t	ft_strlcat(char *dest, const char *src, size_t destsize)
 {
 	size_t	i;
-	
+	size_t	j;
+
 	i = 0;
-	while (dest[i] != '\0')
+	j = 0;
+	while (dest[i])
 		i++;
-	if (destsize > 0 && i < destsize)
+	while (src[j])
+		j++;
+	if (i + j > destsize || destsize == 0)
+		return (destsize + j);
+	else
+		j = 0;
+		while (i < destsize - 1 && src[j])
+		{
+			dest[i + j] = src[j];
+			j++;
+		}
+		dest[i + j] = '\0';
+		return (i + j);
+	/*if (destsize > 0 && i < destsize)
 	{
 		while (src[i] != '\0')
 		{
@@ -36,12 +53,12 @@ size_t	ft_strlcat(char *dest, const char *src, size_t destsize)
 		while (src[i] != '\0')
 			i++;
 	}
-	return (i);
+	return (i); */
 }
 
-int	main()
+/* int	main()
 {
-	char	str[100] = "1234567890123456789012345678901234567890";
+	char	str[100] = "lorem ipsum dolor sit amet";
 	char	dest1[50] = "";
 	char	dest2[50] = "";
 
@@ -50,4 +67,4 @@ int	main()
 	
 	printf("%lu\n",ft_strlcat(dest2,str,0));
 	printf("%s\n",dest2);
-}
+} */

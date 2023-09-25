@@ -6,13 +6,15 @@
 /*   By: iubieta- <iubieta-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/18 18:48:21 by iubieta-          #+#    #+#             */
-/*   Updated: 2023/09/18 19:51:51 by iubieta-         ###   ########.fr       */
+/*   Updated: 2023/09/22 16:40:01 by iubieta-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+/* #include <string.h>
 #include <stdio.h>
-#include <unistd.h>
+#include <unistd.h> */
+
+#include "libft.h"
 
 char	*ft_strnstr(const char *haystack, const char *needle, size_t n)
 {
@@ -44,7 +46,7 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t n)
 	return (0);
 }
 
-int	main()
+/* int	main()
 {
 	char	aguja[50] = "aguja";
 	char	pajar[50] = "Buscar una aguja en un pajar";
@@ -52,4 +54,4 @@ int	main()
 
 	printf("%s\n", strnstr(pajar, aguja, n));
 	printf("%s\n", ft_strnstr(pajar, aguja, n));
-}
+} */

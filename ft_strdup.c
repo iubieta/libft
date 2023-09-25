@@ -6,13 +6,15 @@
 /*   By: iubieta- <iubieta-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/19 20:15:38 by iubieta-          #+#    #+#             */
-/*   Updated: 2023/09/19 20:33:18 by iubieta-         ###   ########.fr       */
+/*   Updated: 2023/09/22 16:39:56 by iubieta-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+/* #include <string.h>
 #include <stdio.h>
-#include <stdlib.h>
+#include <stdlib.h> */
+
+#include "libft.h"
 
 char	*ft_strdup(const char *s)
 {
@@ -32,10 +34,10 @@ char	*ft_strdup(const char *s)
 	return (s_copy);
 }
 
-int main()
+/* int main()
 {
 	char s[50] = "Hola que tal";
 
 	printf("%s\n",strdup(s));
 	printf("%s\n",ft_strdup(s));
-}
+} */

@@ -6,46 +6,47 @@
 /*   By: iubieta- <iubieta-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/15 16:05:21 by iubieta-          #+#    #+#             */
-/*   Updated: 2023/09/15 17:59:32 by iubieta-         ###   ########.fr       */
+/*   Updated: 2023/09/22 17:45:18 by iubieta-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include <stdio.h>
+/* #include <string.h>
+#include <stdio.h> */
+
+#include "libft.h"
 
 size_t	ft_strlcpy(char *dest, const char *src, size_t destsize)
 {
 	size_t	i;
-	
+	size_t	j;
+
+	i = 0;
+	j = 0;
+	if (src == 0 || dest == 0)
+		return (0);
+	while (src[i] != '\0')
+		i++;
 	if (destsize > 0)
 	{
-		i = 0;
-		while (src[i] != '\0')
+		while (src[j] != '\0' && j < destsize - 1)
 		{
-			if (i < destsize - 1)
-				dest[i] = src[i];
-			i++;
+			dest[j] = src[j];
+			j++;
 		}
-		dest[i] = '\0';
-	}
-	else
-	{
-		i = 0;
-		while (src[i] != '\0')
-			i++;
+		dest[j] = '\0';
 	}
 	return (i);
 }
 
-int	main()
+/* int	main()
 {
-	char	str[100] = "123456789012345678901234567890123456789/";
+	char	str[100] = "aaa";
 	char	dest1[50];
 	char	dest2[50];
 
-	printf("%lu\n",strlcpy(dest1,str,0));
+	printf("%lu\n",strlcpy(dest1,str,2));
 	printf("%s\n",dest1);
 	
-	printf("%lu\n",ft_strlcpy(dest2,str,0));
+	printf("%lu\n",ft_strlcpy(dest2,str,2));
 	printf("%s\n",dest2);
-}
+} */

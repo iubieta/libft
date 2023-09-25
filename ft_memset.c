@@ -6,18 +6,21 @@
 /*   By: iubieta- <iubieta-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/12 15:31:39 by iubieta-          #+#    #+#             */
-/*   Updated: 2023/09/14 19:10:39 by iubieta-         ###   ########.fr       */
+/*   Updated: 2023/09/22 17:07:01 by iubieta-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+/* #include <stdio.h>
 #include <string.h>
+ */
 
-void *  ft_memset(void *b, int c, size_t len)
+#include "libft.h"
+
+void	*ft_memset(void *b, int c, size_t len)
 {
 	unsigned char	*str;
-	size_t    		i;
-	
+	size_t			i;
+
 	str = (unsigned char *)b;
 	i = 0;
 	while (i < len)
@@ -28,7 +31,7 @@ void *  ft_memset(void *b, int c, size_t len)
 	return (b);
 }
 
-int main()
+/* int main()
 {
 	char str[50] = "Esta es una funcion muy bonica";
 
@@ -42,4 +45,4 @@ int main()
 	ft_memset(str1 + 5,'$', 4);
 	printf("Función propia: %s\n", str1);
 	return(0);
-}
+} */

@@ -6,7 +6,7 @@
 /*   By: iubieta- <iubieta-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/12 11:53:30 by iubieta-          #+#    #+#             */
-/*   Updated: 2023/09/12 12:16:45 by iubieta-         ###   ########.fr       */
+/*   Updated: 2023/09/22 16:39:48 by iubieta-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,9 @@
 #include <stdio.h>
 #include <ctype.h>
 */
+
+#include "libft.h"
+
 int	ft_isalpha(int c)
 {
 	if ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'))

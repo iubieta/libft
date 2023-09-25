@@ -10,9 +10,10 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/* #include <string.h>
+#include <stdio.h> */
 
-#include <string.h>
-#include <stdio.h>
+#include "libft.h"
 
 void	*ft_memchr(const void	*s, int c, size_t n)
 {
@@ -31,7 +32,7 @@ void	*ft_memchr(const void	*s, int c, size_t n)
 		return (&ptr[i]);
 }
 
-int	main()
+/* int	main()
 {
 	char	str[50] = "hello world the pointer should be at this point";
 	int		byte = 'a';
@@ -39,4 +40,4 @@ int	main()
 
 	printf("%s\n", (char *)memchr(str, byte, n));
 	printf("%s\n", (char *)ft_memchr(str, byte, n));
-}
+} */

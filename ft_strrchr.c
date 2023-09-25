@@ -6,12 +6,14 @@
 /*   By: iubieta- <iubieta-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/15 18:21:32 by iubieta-          #+#    #+#             */
-/*   Updated: 2023/09/15 18:26:00 by iubieta-         ###   ########.fr       */
+/*   Updated: 2023/09/22 16:40:03 by iubieta-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include <stdio.h>
+/* #include <string.h>
+#include <stdio.h> */
+
+#include "libft.h"
 
 char	*ft_strrchr(const char *s, int c)
 {
@@ -30,11 +32,11 @@ char	*ft_strrchr(const char *s, int c)
 		return (0);
 }
 
-int	main()
+/* int	main()
 {
 	char	str[50] = "String en el que buscar";
 	char	c = '\0';
 
 	printf("%s\n",strrchr(str,c));
 	printf("%s\n",ft_strrchr(str,c));
-}
+} */
