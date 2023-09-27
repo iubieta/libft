@@ -6,7 +6,7 @@
 /*   By: iubieta- <iubieta-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/15 16:05:21 by iubieta-          #+#    #+#             */
-/*   Updated: 2023/09/22 17:45:18 by iubieta-         ###   ########.fr       */
+/*   Updated: 2023/09/27 19:49:37 by iubieta-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,11 +22,9 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t destsize)
 
 	i = 0;
 	j = 0;
-	if (src == 0 || dest == 0)
-		return (0);
 	while (src[i] != '\0')
 		i++;
-	if (destsize > 0)
+	if (destsize > 0 && dest != NULL)
 	{
 		while (src[j] != '\0' && j < destsize - 1)
 		{
