@@ -6,7 +6,7 @@
 /*   By: iubieta- <iubieta-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/18 18:48:21 by iubieta-          #+#    #+#             */
-/*   Updated: 2023/09/26 19:01:39 by iubieta-         ###   ########.fr       */
+/*   Updated: 2023/09/28 19:55:20 by iubieta-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,6 @@
 
 char	*ft_strnstr(const char *haystack, const char *needle, size_t n)
 {
-	//char	*ptr;
 	size_t	i;
 	size_t	j;
 
@@ -29,18 +28,14 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t n)
 	{
 		if (haystack[i] == needle[0])
 		{	
-			//write(1,"IN",2);
-			//ptr = &haystack[i];
 			j = 0;
 			while (haystack[i + j] == needle[j] && i + j < n)
 			{
-				//write(1, &haystack[i + j],1);
 				j++;
 				if (needle[j] == '\0')
 					return ((char *)&haystack[i]);
 			}
 		}
-		//write(1, &haystack[i],1);
 		i++;
 	}
 	return (0);
