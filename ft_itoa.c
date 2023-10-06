@@ -6,7 +6,7 @@
 /*   By: iubieta- <iubieta-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/03 19:29:44 by iubieta-          #+#    #+#             */
-/*   Updated: 2023/10/04 20:04:53 by iubieta-         ###   ########.fr       */
+/*   Updated: 2023/10/06 16:59:51 by iubieta-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,49 +14,54 @@
 
 #include "libft.h"
 
-char	ft_itoa(int n)
+int	ft_intlen(int	n)
+{
+	int	len;
+	
+	len = 1;
+	if (n < 0)
+		len++;
+	while (n / 10 != 0)
+	{
+		n = n / 10;
+		len++;
+	}
+	return (len);
+}
+
+char	*ft_itoa(int	n)
 {
 	char	*str;
-	char	number;
-	int		characters;
-	int		power;
+	int		len;
 	int		i;
+	long	nb;
 
-	characters = 0;
-	if (n < 0)
-		characters++;	
-	power = 0;
-	while (n / (10 * power) > 10)
-		power++;
-	characters += power;
-	printf("%i\n",characters);
-	str = (char *)malloc(characters * sizeof(char));
+	nb = n;
+	len = ft_intlen(nb);
+	// printf("len:%d\n",len);
+	str = (char *)malloc((len + 1) * sizeof(char));
 	if (!str)
 		return (NULL);
-	else
+	i = 0;
+	if (nb == 0)
+		str[0] = '0';
+	if (nb < 0)
 	{
-		
-		i = 0;
-		if (n < 0)
-		{
-			str[0] = "-";
-			i++;
-		}
-		while (i < characters)
-		{
-			printf("IN");
-			str[i] = (char)(n / (10 * power) - '0');
-			n = n % (10 * power);
-			i++;
-		}
-		return(str);
+		str[0] = '-';
+		nb = nb * -1;
 	}
-	
+	while (nb > 0)
+	{
+		str[len - i++ - 1] = (char)(nb % 10 + '0');
+		nb = nb / 10;
+	}
+	str[len] = '\0'; 
+	return (str);
 }
 
-int main()
+/* int main()
 {
-	int n = 123;
+	int n = -10;
 
 	printf("%s",ft_itoa(n));
-}
+} */
