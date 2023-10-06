@@ -6,7 +6,7 @@
 /*   By: iubieta- <iubieta-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/03 19:29:44 by iubieta-          #+#    #+#             */
-/*   Updated: 2023/10/06 16:59:51 by iubieta-         ###   ########.fr       */
+/*   Updated: 2023/10/06 17:06:55 by iubieta-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 
 #include "libft.h"
 
-int	ft_intlen(int	n)
+int	ft_intlen(int n)
 {
 	int	len;
-	
+
 	len = 1;
 	if (n < 0)
 		len++;
@@ -29,7 +29,7 @@ int	ft_intlen(int	n)
 	return (len);
 }
 
-char	*ft_itoa(int	n)
+char	*ft_itoa(int n)
 {
 	char	*str;
 	int		len;
@@ -38,7 +38,6 @@ char	*ft_itoa(int	n)
 
 	nb = n;
 	len = ft_intlen(nb);
-	// printf("len:%d\n",len);
 	str = (char *)malloc((len + 1) * sizeof(char));
 	if (!str)
 		return (NULL);
@@ -55,7 +54,7 @@ char	*ft_itoa(int	n)
 		str[len - i++ - 1] = (char)(nb % 10 + '0');
 		nb = nb / 10;
 	}
-	str[len] = '\0'; 
+	str[len] = '\0';
 	return (str);
 }
 
