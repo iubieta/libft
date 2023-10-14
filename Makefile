@@ -1,17 +1,17 @@
 # **************************************************************************** #
 #                                                                              #
 #                                                         :::      ::::::::    #
-#    makefile                                           :+:      :+:    :+:    #
+#    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
 #    By: iubieta- <iubieta-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/22 15:38:39 by iubieta-          #+#    #+#              #
-#    Updated: 2023/09/22 16:02:59 by iubieta-         ###   ########.fr        #
+#    Updated: 2023/10/14 17:38:43 by iubieta-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
-SRCS = $(shell find "." -name "*.c")
+SRCS = $(shell find "." -name "*.c")			
 OBJS = ${SRCS:.c=.o}
 CC = gcc
 FLAGS = -Wall -Wextra -Werror

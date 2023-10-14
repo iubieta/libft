@@ -6,7 +6,7 @@
 /*   By: iubieta- <iubieta-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/11 18:48:55 by iubieta-          #+#    #+#             */
-/*   Updated: 2023/10/11 19:52:47 by iubieta-         ###   ########.fr       */
+/*   Updated: 2023/10/14 14:59:46 by iubieta-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ size_t	ft_cont_substr(char const *s, char c)
 	while (s[i])
 	{
 		if (s[i] != c)
-				cont++;
+			cont++;
 		while (s[i] != c && s[i])
 			i++;
 		if (s[i])
@@ -32,35 +32,63 @@ size_t	ft_cont_substr(char const *s, char c)
 	}
 	return (cont);
 }
+
+void	ft_free_array(char **array)
+{
+	int	i;
+
+	i = 0;
+	while (array[i] != 0)
+	{
+		free(array[i]);
+		i++;
+	}
+	free(array);
+}
+
+char	*ft_fill(char const *s, char c, char **array)
+{
+	int	i;
+	int	start;
+	int	end;
+
+	i = 0;
+	end = 0;
+	while (i < ft_cont_substr(s, c))
+	{
+		start = end;
+		while (s[start] == c)
+			start++;
+		end = start;
+		while (s[end] != c && s[end])
+			end++;
+		array[i] = ft_substr(s, start, (end - start));
+		if (!array[i])
+			ft_free_array(array);
+		i++;
+	}
+	array[i] = NULL;
+	return (array);
+}
+
 char	**ft_split(char const *s, char c)
 {
 	char	**array;
 	char	*ptr;
 	size_t	i;
+	size_t	j;
 	size_t	cont;
 
 	i = 0;
 	cont = ft_cont_substr(s, c);
-	array = (char **)malloc((cont + 1) * sizeof(char *));
+	array = (char **)ft_calloc(cont + 1, sizeof(char **));
 	if (!array)
 		return (NULL);
-	ptr = ft_strdup(s);
-	i = 0;
-	while (*ptr)
-	{
-		if (ptr == c)
-		{
-			*ptr = '\0';
-			ptr++;
-		}
-		if (ptr != )//SEGUIR POR AQUI!!!
-		ptr++;
-	}
-	ptr = NULL;
+	ft_fill(s, c, array);
 	return (array);
 }
 
-int  main(void)
+/* int  main(void)
 {
    char    *s = "      gfdgf biiu asd    ";
    char    c = ' ';
@@ -73,9 +101,9 @@ int  main(void)
    count = ft_cont_substr(s, c);
    printf("s[0]: %c\n", s[0]);
    printf("COUNT en main: %zu\n", count);
-   while (i < 100)
+   while (i < count)
    {
        printf("%s\n", tab[i]);
        i++;
    }
-}
+} */
