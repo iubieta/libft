@@ -6,7 +6,7 @@
 /*   By: iubieta- <iubieta-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/27 19:11:21 by iubieta-          #+#    #+#             */
-/*   Updated: 2023/10/14 16:56:30 by iubieta-         ###   ########.fr       */
+/*   Updated: 2023/10/18 19:52:03 by iubieta-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		return (ft_strdup(""));
 	if (len > ft_strlen(s))
 		len = ft_strlen(s);
+	if (len > ft_strlen(s) - start)
+		len = ft_strlen(s) - start;
 	substr = malloc((len + 1) * sizeof(char));
 	if (!substr)
 		return (0);
