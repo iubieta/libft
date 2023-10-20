@@ -6,7 +6,7 @@
 /*   By: iubieta- <iubieta-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/19 20:15:38 by iubieta-          #+#    #+#             */
-/*   Updated: 2023/09/28 19:51:50 by iubieta-         ###   ########.fr       */
+/*   Updated: 2023/10/20 17:44:23 by iubieta-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,6 @@
 #include <stdlib.h> */
 
 #include "libft.h"
-
-size_t	ft_strlen(const char *s);
-void	*ft_memcpy(void *dest, const void *src, size_t n);
 
 char	*ft_strdup(const char *s)
 {

@@ -6,11 +6,11 @@
 /*   By: iubieta- <iubieta-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/07 17:00:48 by iubieta-          #+#    #+#             */
-/*   Updated: 2023/10/07 17:23:02 by iubieta-         ###   ########.fr       */
+/*   Updated: 2023/10/20 17:44:34 by iubieta-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+/* #include <stdio.h> */
 
 #include "libft.h"
 
