@@ -6,7 +6,7 @@
 /*   By: iubieta- <iubieta-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/12 11:53:30 by iubieta-          #+#    #+#             */
-/*   Updated: 2023/09/22 16:39:48 by iubieta-         ###   ########.fr       */
+/*   Updated: 2023/10/20 14:53:21 by iubieta-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,10 +26,10 @@ int	ft_isalpha(int c)
 		return (0);
 }
 
-/*int	main(void)
+/* int	main(void)
 {
 	char c;
 	c = '?';
 	printf("%i\n",isalpha(c));
 	printf("%i\n",ft_isalpha(c));
-}*/
+} */

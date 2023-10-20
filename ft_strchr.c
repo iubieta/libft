@@ -6,7 +6,7 @@
 /*   By: iubieta- <iubieta-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/15 17:53:50 by iubieta-          #+#    #+#             */
-/*   Updated: 2023/09/22 16:39:55 by iubieta-         ###   ########.fr       */
+/*   Updated: 2023/10/20 15:04:30 by iubieta-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,12 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	char	ch;
-	char	*ptr;
+	char		ch;
+	char		*ptr;
+	size_t		i;
 
 	ch = (char)c;
-	ptr = s;
+	ptr = (char *)s;
 	while (*ptr != ch && *ptr != '\0')
 		ptr++;
 	if (*ptr == ch)
