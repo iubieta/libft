@@ -6,7 +6,7 @@
 /*   By: iubieta- <iubieta-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/15 17:53:50 by iubieta-          #+#    #+#             */
-/*   Updated: 2023/10/20 15:04:30 by iubieta-         ###   ########.fr       */
+/*   Updated: 2023/10/21 18:45:58 by iubieta-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,6 @@ char	*ft_strchr(const char *s, int c)
 {
 	char		ch;
 	char		*ptr;
-	size_t		i;
 
 	ch = (char)c;
 	ptr = (char *)s;

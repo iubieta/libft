@@ -6,7 +6,7 @@
 /*   By: iubieta- <iubieta-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/11 18:48:55 by iubieta-          #+#    #+#             */
-/*   Updated: 2023/10/20 17:44:05 by iubieta-         ###   ########.fr       */
+/*   Updated: 2023/10/21 18:45:31 by iubieta-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,7 +79,6 @@ char	**ft_split(char const *s, char c)
 {
 	char	**array;
 	size_t	i;
-	size_t	j;
 	size_t	cont;
 
 	i = 0;

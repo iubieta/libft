@@ -6,7 +6,7 @@
 /*   By: iubieta- <iubieta-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/19 20:15:38 by iubieta-          #+#    #+#             */
-/*   Updated: 2023/10/20 17:44:23 by iubieta-         ###   ########.fr       */
+/*   Updated: 2023/10/21 18:46:20 by iubieta-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,6 @@
 char	*ft_strdup(const char *s)
 {
 	char	*s_copy;
-	size_t	i;
 
 	s_copy = ft_calloc(sizeof(char), ft_strlen(s) + 1);
 	if (!s_copy)

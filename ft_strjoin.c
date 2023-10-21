@@ -6,7 +6,7 @@
 /*   By: iubieta- <iubieta-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/28 18:38:34 by iubieta-          #+#    #+#             */
-/*   Updated: 2023/09/28 19:52:34 by iubieta-         ###   ########.fr       */
+/*   Updated: 2023/10/21 18:49:07 by iubieta-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,8 @@
 char	*ft_strjoin(char const *s1, char const *s2)
 {
 	char	*final_str;
-	size_t	len;
 
+	final_str = NULL;
 	if (!s1 && !s2)
 		return (NULL);
 	else if (s1 && !s2)

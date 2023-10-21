@@ -6,7 +6,7 @@
 #    By: iubieta- <iubieta-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/22 15:38:39 by iubieta-          #+#    #+#              #
-#    Updated: 2023/10/15 19:51:13 by iubieta-         ###   ########.fr        #
+#    Updated: 2023/10/21 18:59:59 by iubieta-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,7 @@ OBJS = ${SRCS:.c=.o}
 BONUS = $(shell find "." -name "*_bonus.c")
 BONUS_OBJS = ${BONUS:.c=.o}
 CC = gcc
-FLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror
 AR = ar csr
 RM = rm -rf
 
