@@ -16,7 +16,6 @@
 
 size_t	ft_cont_substr(char const *s, char c)
 {
-	size_t	i;
 	size_t	cont;
 
 	i = 0;
