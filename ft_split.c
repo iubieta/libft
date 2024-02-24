@@ -17,7 +17,8 @@
 size_t	ft_cont_substr(char const *s, char c)
 {
 	size_t	cont;
-
+	size_t	i;
+	
 	i = 0;
 	cont = 0;
 	while (s[i])
@@ -77,10 +78,8 @@ char	**ft_fill(char const *s, char c, char **array, int len)
 char	**ft_split(char const *s, char c)
 {
 	char	**array;
-	size_t	i;
 	size_t	cont;
 
-	i = 0;
 	cont = ft_cont_substr(s, c);
 	array = ft_calloc(cont + 1, sizeof(char *));
 	if (!array)
