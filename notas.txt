@@ -1,6 +1,0 @@
-Caracteres de control / texto "invisibles":
-	\t = tabulacion
-	\n = salto de linea
-	\r = 
-	\v = 
-	\f = 
