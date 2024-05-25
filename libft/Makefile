@@ -22,7 +22,6 @@ AR = ar csr
 RM = rm -rf
 
 all : ${OBJS}
-	${AR} ${NAME} ${OBJS}
 
 ${NAME} : ${OBJS} ${INCLUDE}
 	${AR} ${NAME} $^
